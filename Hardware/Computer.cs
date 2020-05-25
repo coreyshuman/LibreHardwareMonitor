@@ -404,7 +404,7 @@ namespace OpenHardwareMonitor.Hardware {
       foreach (IGroup group in groups)
         foreach (IHardware hardware in group.Hardware) 
           hardware.Accept(visitor);
-            //if (NICEnabled)
+            if (NICEnabled)
             {
                 int newNiccount = NetworkInterface.GetAllNetworkInterfaces().Length;
                 if (nicCount != newNiccount)
